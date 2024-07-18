@@ -1,0 +1,328 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  background-color: transparent;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters {
+  box-shadow: none;
+  margin-bottom: 0 !important;
+  background: transparent;
+}
+.MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters {
+  padding: 0;
+  min-height: 45px;
+}
+.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters {
+  margin: 10px 0;
+}
+.Mui-expanded {
+  margin: 0px 0 !important;
+}
+
+.max-speed-marker {
+  background-size: contain;
+}
+
+.marker_tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #b8b8b8 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #b8b8b8;
+  border-radius: 10px;
+  /* border: 3px solid #ffffff; */
+}
+
+.custom-progress-bar {
+  text-align: center;
+}
+
+.MuiSwitch-track {
+  height: 24px;
+  border-radius: 50px;
+}
+.MuiSwitch-root {
+  width: 68px !important;
+  height: 45px !important;
+  top: -10px;
+  left: 0px;
+}
+.MuiTouchRipple-root {
+  top: 5px !important;
+}
+.MuiButtonBase-root.MuiSwitch-switchBase {
+  top: 4.5px !important;
+  left: 5px !important;
+}
+
+.MuiSwitch-thumb {
+  background: white !important;
+}
+.Mui-checked + .MuiSwitch-track {
+  background-color: #0e5bea !important;
+  opacity: 1 !important;
+}
+
+.customButton {
+  color: white !important;
+  background: #0e5bea !important;
+}
+.cancelButton{
+  color: black !important;
+  background: transparent !important;
+}
+
+button.MuiButtonBase-root.MuiButton-root.Mui-disabled {
+  background: rgba(0, 0, 0, 0.12) !important;
+}
+
+button.mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_line.active {
+  background-color: #0e5bea !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+button.mapbox-gl-draw_ctrl-draw-btn.mapbox-gl-draw_polygon.active {
+  background-color: #0e5bea !important;
+}
+.mapbox-gl-draw_line {
+  background-image: url(/line-blue-01.svg) !important;
+  background-size: 32px !important;
+}
+.mapbox-gl-draw_line.active {
+  background-image: url(/line-white-01.svg) !important;
+  background-size: 32px !important;
+}
+
+.mapbox-gl-draw_polygon {
+  background-image: url(/poly-blue-01.svg) !important;
+  background-size: 32px !important;
+}
+.mapbox-gl-draw_polygon.active {
+  background-image: url(/poly-white.svg) !important;
+  background-size: 32px !important;
+}
+
+.mapbox-gl-draw_trash {
+  background-image: url(/delete-red-01.svg) !important;
+  background-size: 32px !important;
+}
+
+.MuiContainer-root {
+  max-width: 100% !important;
+}
+
+.hiddenTrip {
+  display: none;
+}
+
+.drawing_tools_wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 100px;
+  left: 12px;
+}
+.draw-manager-tool {
+  position: absolute;
+  top: 70px;
+  z-index: 9;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.draw-manager-tool > div {
+  height: 50px;
+  width: 50px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  border-bottom: 1px solid #efefef;
+}
+.draw-manager-tool > div.active {
+  background-color: #0e5bea !important;
+}
+
+.draw-manager-tool > div.draw_polygon {
+  background-image: url(/polygon-01.svg) !important;
+}
+.draw-manager-tool > div.active.draw_polygon {
+  background-image: url(/polygon-w.svg) !important;
+}
+
+.draw-manager-tool > div.draw_circle {
+  background-image: url(/circle-01.svg) !important;
+}
+.draw-manager-tool > div.active.draw_circle {
+  background-image: url(/circle-w.svg) !important;
+}
+
+.draw-manager-tool .draw_polyline {
+  background-image: url(/line-blue-01.svg) !important;
+}
+.draw-manager-tool > div.draw_polyline.active {
+  background-image: url(/rectangle-w.svg) !important;
+}
+
+.draw-manager-tool .draw_handle {
+  background-image: url(/move-01.svg) !important;
+}
+.draw-manager-tool .draw_handle.active {
+  background-image: url(/move-w.svg) !important;
+}
+.draw-manager-tool > div:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.draw-manager-tool > div:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.map-geozone-label {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.tabContent {
+  display: none;
+}
+
+.tabContent.active {
+  display: block;
+}
+
+.image-upload-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.image-upload-custom .MuiDropzoneArea-root {
+  border-radius: 50%;
+  max-height: 100px !important;
+  width: 150px;
+  min-height: 150px;
+}
+.image-upload-custom .MuiDropzoneArea-text {
+  margin-top: 40px;
+}
+
+.image-upload-custom .MuiGrid-root.MuiGrid-item {
+  position: initial !important;
+}
+.image-upload-custom .MuiDropzonePreviewList-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.clickable:hover {
+  color: blue;
+}
+.activeTripDetailBar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+.refreshButton {
+  color: #2555a1;
+  width: 100%;
+  display: flex;
+  padding: 13px;
+  background: #eceff9;
+  margin-top: 15px;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refreshButton:hover {
+  background: #3c4f8d !important;
+  color: white !important;
+}
+
+#geozone-button{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  cursor: pointer;
+  background-image: url(/geo-zones-icon-grey.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  border-radius: 4px;
+}
+
+#geozone-button.active{
+  background-color: #2979FF !important;
+  background-image: url(/geo-zones-icon-white.svg) !important;
+}
+
+.searchbox-placeholder{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
